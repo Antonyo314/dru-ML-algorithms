@@ -95,7 +95,7 @@ def plot_2f_dataset(data, labels=None, colors=None):
 
 def print_result(coef, true, predict, cut = 5):
     print('w:\n',coef,'\n')
-    print('true vs. prediction:\n',vstack((true,predict)).T[:cut],'\n...\n')
+    print('true vs. prediction:\n',np.vstack((true,predict)).T[:cut],'\n...\n')
     print('accuracy: ',round(accuracy(true, predict),3))
 
 
@@ -153,6 +153,8 @@ data, target = datasets.make_blobs(n_samples=1000, n_features=2, centers=3,
 # In[8]:
 
 labels = K_means_clustering(data,n_clusters=3)
+print(labels)
+
 #if data.shape[1] == 2:
     #plot_2f_dataset(data, labels)
 
@@ -165,6 +167,7 @@ from sklearn import cluster
 
 K_means_clustering = cluster.KMeans(n_clusters=3, random_state=None)
 K_means_clustering.fit(data)
+print(K_means_clustering.labels_)
 #if data.shape[1] == 2:
     #plot_2f_dataset(data, K_means_clustering.labels_)
 

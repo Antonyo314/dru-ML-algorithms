@@ -93,7 +93,7 @@ def print_result(true, predict, cut = 5):
         nl = '\n...\n'
     else:
         nl = '\n'
-    print('true vs. prediction:\n',vstack((true,predict)).T[:cut],nl)
+    print('true vs. prediction:\n',np.vstack((true,predict)).T[:cut],nl)
     print('accuracy: ',round(accuracy(true, predict),3))
 
 

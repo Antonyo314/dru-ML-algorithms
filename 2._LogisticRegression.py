@@ -6,6 +6,7 @@
 import numpy as np
 import pandas as pd
 import scipy
+from numpy import exp, log
 
 from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
@@ -170,7 +171,7 @@ def plot_2f_dataset(data, labels, colors=None):
 
 def print_result(coef, true, predict, cut = 5):
     print('w:\n',coef,'\n')
-    print('true vs. prediction:\n',vstack((true,predict)).T[:cut],'\n...\n')
+    print('true vs. prediction:\n',np.vstack((true,predict)).T[:cut],'\n...\n')
     print('accuracy: ',round(accuracy(true, predict),3))
 
 

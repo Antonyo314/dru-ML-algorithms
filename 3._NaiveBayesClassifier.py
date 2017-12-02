@@ -171,7 +171,7 @@ test_labels_predict = naive_bayes_classifier(train_data, train_labels,
 
 print_result(test_labels, test_labels_predict, cut = 10)
 #if train_data.shape[1] == 2 and (train_data.dtype.type == np.float64
-                                 or train_data.dtype.type == np.int64):
+#                                 or train_data.dtype.type == np.int64):
     #plot_2f_dataset(train_data, train_labels_predict)
     #plot_2f_dataset(test_data, test_labels_predict)
 
